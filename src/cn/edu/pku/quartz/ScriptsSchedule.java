@@ -19,16 +19,18 @@ public class ScriptsSchedule {
 
 	public static void main(String[] args) throws SchedulerException {
 
+//		调度定义
 		SchedulerFactory schedulerFactory = new StdSchedulerFactory();
 		Scheduler scheduler = schedulerFactory.getScheduler();
 
-		JobDetail jobDetail = JobBuilder.newJob(ScriptExecute.class).withIdentity("test1", "group1").build();
-		
+//		任务  ScriptExecute
+		JobDetail jobDetail = JobBuilder.newJob(ScriptExecute.class).withIdentity("test1", "group1").build();		
 		JobDataMap jobDataMap = jobDetail.getJobDataMap();
 		Email email = new Email("zjbpoping@gmail.com", "subject", "message ", null);
 		jobDataMap.put("Email", email);
 		jobDataMap.put("Script", path);
 
+//		触发
 		SimpleTriggerImpl simpleTrigger = new SimpleTriggerImpl("simpleTrigger");
 
 		simpleTrigger.setStartTime(new Date(System.currentTimeMillis()));

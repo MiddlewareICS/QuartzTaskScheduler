@@ -61,56 +61,7 @@ public class ScriptExecute implements Job {
 	    
 	    int a = 2010, b = 2 ;  
 	    PyObject pyobj = func.__call__(new PyInteger(a), new PyInteger(b));  
-	    System.out.println("anwser = " + pyobj.toString());
-		
-//		ScriptEngine pyEngine = new ScriptEngineManager().getEngineByName("python");
-//		
-//		if (pyEngine != null){
-//			
-//			System.out.print("start\n");
-//			
-//			try {
-//				/**
-//				 * Read from file stream
-//				 */
-//				/*Reader scriptReader = new InputStreamReader(
-//						ScriptExecute.class.getResourceAsStream(path));
-//				pyEngine.eval(scriptReader);
-//				pyEngine.eval(scriptReader);
-//				*/
-//				
-//				/**
-//				 * Bindings execute
-//				 */
-//				/*Bindings param = pyEngine.createBindings();
-//				
-//				param.put("c", 3);
-//				param.put("d", 4);
-//				
-//				String jsData = getFileData( new File(path));
-//				
-//				pyEngine.eval(jsData, param);*/	
-//				
-//				String jsData = getFileData(new File(path));
-//				pyEngine.eval(jsData);
-//				
-//				if (pyEngine instanceof Invocable) {
-//	                Invocable invocable = (Invocable) pyEngine;
-//	                // Method call
-//	                Object result = invocable.invokeFunction("test", 1, 2);
-//	                System.out.println("The result is: " + result);
-//	            }
-//			} catch (ScriptException e) {
-//				// TODO Auto-generated catch block
-//				System.out.println("This is just a test, so nobody cares it is correct or not ");
-//				e.printStackTrace();
-//			} catch (NoSuchMethodException e) {
-//				System.out.println("Nobody care the method is exist or not");
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			}
-//		}
-		
+	    System.out.println("anwser = " + pyobj.toString());	
 	}
 
 }
