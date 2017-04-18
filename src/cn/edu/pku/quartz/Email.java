@@ -13,8 +13,6 @@ public class Email {
 	public String message = null;
 	public String attachment_path = null;
 
-	private static final String CLASSNAME = "Email";
-
 	public Email(String toEmail, String subject, String message, String attachment_path) {
 		this.toEmail = toEmail;
 		this.subject = subject;
